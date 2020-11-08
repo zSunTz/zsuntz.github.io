@@ -1,0 +1,124 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .user-info {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .user-info::after {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .header__navbar-user-img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--border-color);
+    }
+    .user-name {
+        font-size: 1.8rem;
+        color: var(--text-color);
+        margin-left: 5px;
+    }
+    .header__cart-list { 
+        position: fixed;
+        padding: 0 calc((100% - 644px)/2);
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        animation: none;
+    }
+    .header__cart-list::after {
+        display: none;
+    }
+    .app__container {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+    .header__cart-item-remove-btn {
+        display: block;
+    }
+    .app__content {
+        padding-top: 8px;
+    }
+    .mobile-category {
+        display: block;
+    }
+    .footer__download-mobile {
+        text-align: center;
+    }
+    .footer__download {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer__download-app-link {
+        padding: 4px 0;
+    }
+}
+
+/* Tablet */ 
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header__mobile-select {
+        display: block;
+    }
+    .header__mobile-search-icon {
+        display: block;
+    }
+    .header__search-btn {
+        margin: 0 16px;
+    }
+    .header__logo-img {
+        width: 100px;
+    }
+    .header__logo {
+        position: absolute;
+        top: 10px;
+        left: 35%;
+    }
+    .header__cart-wrap {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .pagination-item {
+        margin: 0;
+    }
+    .pagination-item-link {
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+    .app__content {
+        margin: 0 4px;
+    }
+    .footer__content {
+        padding: 0 16px;
+    }
+}
